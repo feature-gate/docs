@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "bun run sync-core-js && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -15,7 +15,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "biome lint .",
     "format": "biome format --write .",
-    "check": "biome check --write ."
+    "check": "biome check --write .",
+    "sync-core-js": "rm -rf core-js && git clone git@github.com:feature-gate/core-js.git && rm -rf docs/core-js && cp -r core-js/docs docs/core-js && rm -rf core-js"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
