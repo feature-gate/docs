@@ -18,8 +18,6 @@ const config: Config = {
   baseUrl: '/docs/',
   organizationName: 'feature-gate',
   projectName: 'docs',
-  deploymentBranch: 'gh-pages',
-  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
@@ -33,6 +31,7 @@ const config: Config = {
       'classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/feature-gate/docs/tree/main/',
         },
