@@ -21,3 +21,6 @@ yarn-error.log*
 
 # Local files
 *.local.*
+
+# Feature Gate Docs
+docs/core-js

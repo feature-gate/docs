@@ -14,12 +14,12 @@ const config: Config = {
     v4: true,
   },
 
-  // TODO: update with your production URL
   url: 'https://feature-gate.github.io',
   baseUrl: '/',
-
   organizationName: 'feature-gate',
   projectName: 'docs',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
