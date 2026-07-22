@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   url: 'https://feature-gate.github.io',
-  baseUrl: '/',
+  baseUrl: '/docs/',
   organizationName: 'feature-gate',
   projectName: 'docs',
   deploymentBranch: 'gh-pages',
