@@ -3,6 +3,17 @@ import type { Config } from '@docusaurus/types';
 import type { PluginOptions as SearchLocalOptions } from '@easyops-cn/docusaurus-search-local';
 import { themes as prismThemes } from 'prism-react-renderer';
 
+function tailwindPlugin() {
+  return {
+    name: 'tailwind-plugin',
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    configurePostCss(postcssOptions: any) {
+      postcssOptions.plugins.push(require('@tailwindcss/postcss'));
+      return postcssOptions;
+    },
+  };
+}
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
@@ -25,6 +36,8 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  plugins: [tailwindPlugin],
 
   presets: [
     [
