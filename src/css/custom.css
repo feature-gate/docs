@@ -1,3 +1,7 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+@source "../";
+
 :root {
   --ifm-color-primary: #FF4F00;
   --ifm-color-primary-dark: #CC3E00;
