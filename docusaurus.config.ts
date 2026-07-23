@@ -30,6 +30,9 @@ const config: Config = {
   organizationName: 'feature-gate',
   projectName: 'docs',
 
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+
   onBrokenLinks: 'throw',
 
   i18n: {
