@@ -1,4 +1,5 @@
 import React, { JSX, useState } from 'react';
+import { Highlight, themes } from 'prism-react-renderer';
 
 const IconTerminal = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -47,6 +48,8 @@ const IconCheck = ({ className }: { className?: string }) => (
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
 );
+
+const PRISM_LANG: Record<string, string> = { ts: 'typescript', go: 'go', rust: 'rust', python: 'python' };
 
 const LANGUAGES: Record<string, { id: string; name: string; command: string; repo: string; color: string; code: string }> = {
   ts: {
@@ -341,10 +344,20 @@ export default function Home(): JSX.Element {
                   </div>
                   <div className="ml-4 text-xs font-mono text-zinc-500">example.{langData.id}</div>
                 </div>
-                <div className="p-4 overflow-x-auto text-sm font-mono leading-relaxed text-zinc-300">
-                  <pre>
-                    <code>{langData.code}</code>
-                  </pre>
+                <div className="p-4 overflow-x-auto text-sm font-mono leading-relaxed">
+                  <Highlight theme={themes.vsDark} code={langData.code} language={PRISM_LANG[langData.id]}>
+                    {({ className, style, tokens, getLineProps, getTokenProps }) => (
+                      <pre className={className} style={{ ...style, background: 'transparent', margin: 0 }}>
+                        {tokens.map((line, i) => (
+                          <div key={i} {...getLineProps({ line })}>
+                            {line.map((token, key) => (
+                              <span key={key} {...getTokenProps({ token })} />
+                            ))}
+                          </div>
+                        ))}
+                      </pre>
+                    )}
+                  </Highlight>
                 </div>
               </div>
 
