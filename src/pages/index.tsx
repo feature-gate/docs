@@ -293,7 +293,7 @@ export default function Home(): JSX.Element {
                     <code className="font-mono text-sm text-zinc-300 overflow-x-auto whitespace-nowrap hide-scrollbar">{langData.command}</code>
                     <button
                       onClick={() => handleCopy(langData.command)}
-                      className="ml-4 p-2 text-zinc-500 hover:text-white hover:bg-zinc-800 transition-colors flex-shrink-0"
+                      className="ml-4 p-2 bg-transparent text-zinc-500 hover:text-white hover:bg-zinc-800 transition-colors flex-shrink-0"
                       aria-label="Copy command"
                     >
                       {copied ? <IconCheck className="w-4 h-4 text-green-500" /> : <IconCopy className="w-4 h-4" />}

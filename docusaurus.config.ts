@@ -21,10 +21,6 @@ const config: Config = {
   tagline: 'A single, consistent API to evaluate feature flags and read remote config values — no matter which backend you use.',
   favicon: 'img/favicon.ico',
 
-  future: {
-    v4: true,
-  },
-
   url: 'https://feature-gate.github.io',
   baseUrl: '/docs/',
   organizationName: 'feature-gate',
