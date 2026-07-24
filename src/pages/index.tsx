@@ -190,7 +190,7 @@ export default function Home(): JSX.Element {
               A unified, fail-safe API for feature toggles and remote configuration. Write your application logic once, and swap backend providers (Statsig, Unleash, etc.) without altering a single line of business code.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#quickstart" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-zinc-950 font-semibold px-6 py-3 hover:bg-orange-400 transition-colors">
+              <a href="#quickstart" className="inline-flex items-center justify-center gap-2 bg-orange-500 text-zinc-950 font-semibold px-6 py-3 hover:bg-orange-400 transition-colors" style={{color: '#09090b'}}>
                 <IconTerminal className="w-5 h-5" />
                 Start Building
               </a>
