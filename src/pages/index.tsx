@@ -276,7 +276,7 @@ export default function Home(): JSX.Element {
                   className={`px-6 py-4 font-mono text-sm transition-all whitespace-nowrap border-b-2 ${
                     activeLang === lang.id
                       ? `border-orange-500 text-white bg-zinc-900/80`
-                      : `border-transparent text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900/40`
+                      : `border-transparent text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/40`
                   }`}
                 >
                   {lang.name}
